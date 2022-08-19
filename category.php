@@ -1,14 +1,16 @@
-<?php get_header(); ?>
+<?php get_header() ?>
 
-<h1>helo helo</h1>
+<h1><?php the_category() ?></h1>
 
-<?php
-$args = [
-    'post_type' => 'post',
-    'post_per_page' => 10
-];
-
-$loop = new WP_Query($args);
+<?php 
+    $test = get_posts();
+    echo $test;
+    $args = [
+        'post_type' => 'post',
+        // 'category_name' => get_the_category_by_ID(the_category())
+    ];
+    
+    $loop = new WP_Query($args);
 
 if($loop -> have_posts()) {
     while($loop -> have_posts()) {
@@ -23,7 +25,8 @@ if($loop -> have_posts()) {
         </article>
         <?php
     }
-}
-
-get_footer();
+} 
 ?>
+
+
+<?php get_footer() ?>
