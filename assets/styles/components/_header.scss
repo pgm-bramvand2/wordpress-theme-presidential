@@ -1,0 +1,47 @@
+.navbar {
+    position: relative!important;
+    z-index: 10;
+    
+    .navbar-brand {
+        span {
+            color: $primary;
+            font-weight: 800;
+        }
+    }
+
+    .navbar-logo {
+        position: absolute!important;
+        left: 50%;
+        top: calc(50% + 1rem);
+        transform: translate(-50%, -50%);
+
+        .custom-logo {
+            height: 64px;
+            width: 94px;
+            transition: all 0.2s ease-in-out;
+
+            &:hover {
+                transform: scale(105%);
+            }
+        }
+    }
+
+    .navbar-nav {
+        .nav-item {
+            padding: 0 .5rem;
+    
+            .nav-link {
+                color: $primary;
+                padding: 0;
+                font-family: 'Signika', sans-serif!important;
+                border-bottom: 0.5px solid #e0e5ef;
+    
+                &:hover {
+                    color: $accent;
+                    border-bottom: 0.5px solid $accent;
+    
+                }
+            }
+        }
+    }
+}
