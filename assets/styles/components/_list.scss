@@ -1,0 +1,31 @@
+.line-link-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    li {
+        margin-bottom: 1rem;
+        
+        a {
+            display: block;
+            padding: .25rem 0 .25rem 1rem ;
+            border-left: .2rem solid $accent;
+            font-family: 'Signika', sans-serif;
+            text-decoration: none;
+
+            &:hover {
+                border-color: #edbe87;
+            }
+        }
+    }
+
+    &.line-link-list--serif {
+        li {
+            a {
+                font-family: 'EB Garamond';
+                font-size: 1.5rem;
+            }
+        }
+    }
+
+}

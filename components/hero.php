@@ -15,7 +15,7 @@
                 <?php the_field('hero-title') ?>       
             </h2>
 
-            <ul>
+            <ul class="line-link-list">
                 <?php $hero = get_field('hero-links'); ?>
                 <?php if( $hero) : ?>
                     <?php foreach($hero as $post) :?>

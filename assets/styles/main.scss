@@ -6,8 +6,15 @@
 @import './base/typography';
 
 // Components
+@import './components/footer';
 @import './components/header';
 @import './components/hero';
+@import './components/feature';
+@import './components/list';
+@import './components/pagination';
+
+// Pages
+@import './pages/briefing-room';
 
 // Vendors
 @import './vendors/bootstrap';

@@ -8,6 +8,10 @@ body {
   word-break: break-word;
 }
 
+section {
+  width: 100%;
+}
+
 p,
 a,
 h1,
@@ -23,13 +27,108 @@ h5,
   color: #0a2458;
 }
 
+.title {
+  text-align: center;
+  font-size: 3rem;
+  font-weight: bolder;
+  margin-bottom: 3rem;
+}
+
+footer {
+  width: 100%;
+  margin-top: 5rem;
+  padding: 5rem;
+  position: relative;
+}
+footer .footer-inner {
+  padding: 5rem 2rem;
+  margin: 0 auto;
+  max-width: 82.5rem;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  z-index: 20;
+  border-top: 0.1rem solid #e0e5ef;
+}
+footer .footer-inner ul {
+  list-style: none;
+  margin: 0;
+}
+footer .footer-inner .menu-primary-footer-menu-container .menu {
+  -moz-column-count: 2;
+       column-count: 2;
+  -moz-column-gap: 3rem;
+       column-gap: 3rem;
+}
+footer .footer-inner .menu-primary-footer-menu-container .menu li {
+  margin-bottom: 0.5rem;
+}
+footer .footer-inner .menu-primary-footer-menu-container .menu li a {
+  color: #0a2458;
+  padding: 0;
+  font-family: "Signika", sans-serif !important;
+  border-bottom: 0.5px solid #e0e5ef;
+  text-decoration: none !important;
+}
+footer .footer-inner .menu-primary-footer-menu-container .menu li a:hover {
+  color: #9c1919 !important;
+  border-bottom: 0.5px solid #9c1919;
+}
+footer .footer-inner .menu-secondary-footer-menu-container li a {
+  border-bottom: none;
+  font-size: 0.8rem;
+  font-family: "Signika";
+  text-decoration: none;
+}
+footer .footer-inner .menu-secondary-footer-menu-container li a:hover {
+  color: #9c1919 !important;
+}
+footer .footer-inner .textwidget {
+  font-family: "EB Garamond";
+  color: #0a2458;
+}
+footer .footer-inner .textwidget ul {
+  margin: 0;
+}
+footer .footer-inner .textwidget ul li:first-child {
+  font-weight: bold;
+}
+footer .footer-inner .textwidget ul li:last-child {
+  margin-top: 1rem;
+}
+footer .footer-inner .textwidget ul li:last-child a {
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: #876450;
+  letter-spacing: 0.2rem;
+  text-decoration: none;
+}
+footer .footer-inner .textwidget ul li:last-child a:hover {
+  color: #9c1919;
+}
+footer .seal-wrapper {
+  width: 43rem;
+  height: 43rem;
+  position: absolute;
+  z-index: -10;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+}
+footer .seal-wrapper .wh-seal {
+  width: 100%;
+  height: 100%;
+  transform: translate(5rem, 5rem);
+  opacity: 60%;
+}
+
 .navbar {
   position: relative !important;
   z-index: 10;
 }
 .navbar .navbar-brand span {
   color: #0a2458;
-  font-weight: 800;
+  font-weight: 800 !important;
 }
 .navbar .navbar-logo {
   position: absolute !important;
@@ -117,23 +216,142 @@ h5,
   line-height: 1;
   border-bottom: 0.01rem solid #e0e5ef;
 }
-.hero-container .hero-block ul {
+
+.feature-container {
+  width: 100%;
+  background: linear-gradient(to left, #fffbec 65%, transparent 0);
+}
+.feature-container:nth-child(even) {
+  background: linear-gradient(to right, #fffbec 65%, transparent 0);
+}
+.feature-container:nth-child(even) .feature {
+  flex-direction: row-reverse;
+}
+.feature-container .feature {
+  margin: 5rem auto;
+  max-width: 82.5rem;
+  height: 35rem;
+  display: flex;
+  align-items: center;
+}
+.feature-container .feature .feature-image-container {
+  width: 38rem;
+  height: 30rem;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+.feature-container .feature .feature-image-container img {
+  width: 100%;
+  height: 100%;
+}
+.feature-container .feature .feature-content-container {
+  font-family: "EB Garamond";
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  max-width: 50%;
+  display: flex;
+  flex-direction: column;
+  padding: 5rem 0 5rem 5rem;
+}
+.feature-container .feature .feature-content-container small, .feature-container .feature .feature-content-container .small {
+  font-size: 1rem;
+  font-family: "Signika";
+}
+.feature-container .feature .feature-content-container strong {
+  font-size: 2.5rem;
+  font-weight: bold;
+  padding-bottom: 1.5rem;
+  border-bottom: 0.1rem solid #e0e5ef;
+}
+.feature-container .feature .feature-content-container p {
+  padding: 2rem 0;
+  font-size: 1.2rem;
+}
+
+.line-link-list {
   list-style: none;
   margin: 0;
   padding: 0;
 }
-.hero-container .hero-block ul li {
+.line-link-list li {
   margin-bottom: 1rem;
 }
-.hero-container .hero-block ul li a {
+.line-link-list li a {
   display: block;
   padding: 0.25rem 0 0.25rem 1rem;
-  border-left: 0.3rem solid #9c1919;
-  font-family: "Signika", sans-serif !important;
+  border-left: 0.2rem solid #9c1919;
+  font-family: "Signika", sans-serif;
   text-decoration: none;
 }
-.hero-container .hero-block ul li a:hover {
+.line-link-list li a:hover {
   border-color: #edbe87;
+}
+.line-link-list.line-link-list--serif li a {
+  font-family: "EB Garamond";
+  font-size: 1.5rem;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+}
+.pagination span,
+.pagination a {
+  font-family: "Signika";
+  font-size: 1.2rem;
+  padding: 0.25rem 0.75rem;
+  margin: 0 0.25rem;
+}
+.pagination .current {
+  color: #9c1919;
+}
+.pagination a {
+  text-decoration: none;
+  border-bottom: 0.1rem solid #e0e5ef;
+}
+.pagination a:hover {
+  color: #9c1919;
+  border-bottom-color: #9c1919;
+}
+
+.briefing-room {
+  margin: 5rem auto;
+  width: 82.5rem;
+  display: flex;
+  justify-content: center;
+}
+.briefing-room .briefing-room-inner {
+  max-width: 40rem;
+  padding: 0 2rem;
+}
+.briefing-room .briefing-room-inner .posts .post {
+  border-bottom: 0.1rem solid #e0e5ef;
+  padding-bottom: 1.5rem;
+  margin-bottom: 2rem;
+}
+.briefing-room .briefing-room-inner .posts .post h2 a, .briefing-room .briefing-room-inner .posts .post .h2 a {
+  font-size: 1.8rem;
+  font-weight: 500;
+  text-decoration: none;
+}
+.briefing-room .briefing-room-inner .posts .post h2 a:hover, .briefing-room .briefing-room-inner .posts .post .h2 a:hover {
+  color: #9c1919;
+}
+.briefing-room .briefing-room-inner .posts .post .post-info {
+  display: flex;
+}
+.briefing-room .briefing-room-inner .posts .post .post-info span,
+.briefing-room .briefing-room-inner .posts .post .post-info a {
+  font-family: "Signika";
+  font-size: 1rem;
+  color: #0969be;
+  text-decoration: none;
+}
+.briefing-room .briefing-room-inner .posts .post .post-info ul {
+  margin: 0;
+  padding: 0;
+  padding-left: 1.5rem;
 }
 
 /*!
@@ -172,7 +390,7 @@ h5,
   --bs-info: #0dcaf0;
   --bs-warning: #ffc107;
   --bs-danger: #dc3545;
-  --bs-light: #f8f9fa;
+  --bs-light: #e0e5ef;
   --bs-dark: #212529;
   --bs-primary-rgb: 10, 36, 88;
   --bs-secondary-rgb: 36, 18, 106;
@@ -180,7 +398,7 @@ h5,
   --bs-info-rgb: 13, 202, 240;
   --bs-warning-rgb: 255, 193, 7;
   --bs-danger-rgb: 220, 53, 69;
-  --bs-light-rgb: 248, 249, 250;
+  --bs-light-rgb: 224, 229, 239;
   --bs-dark-rgb: 33, 37, 41;
   --bs-white-rgb: 255, 255, 255;
   --bs-black-rgb: 0, 0, 0;
@@ -2038,13 +2256,13 @@ progress {
 
 .table-light {
   --bs-table-color: #000;
-  --bs-table-bg: #f8f9fa;
-  --bs-table-border-color: #dfe0e1;
-  --bs-table-striped-bg: #ecedee;
+  --bs-table-bg: #e0e5ef;
+  --bs-table-border-color: #caced7;
+  --bs-table-striped-bg: #d5dae3;
   --bs-table-striped-color: #000;
-  --bs-table-active-bg: #dfe0e1;
+  --bs-table-active-bg: #caced7;
   --bs-table-active-color: #000;
-  --bs-table-hover-bg: #e5e6e7;
+  --bs-table-hover-bg: #cfd4dd;
   --bs-table-hover-color: #000;
   color: var(--bs-table-color);
   border-color: var(--bs-table-border-color);
@@ -3093,19 +3311,19 @@ textarea.form-control-lg {
 
 .btn-light {
   --bs-btn-color: #000;
-  --bs-btn-bg: #f8f9fa;
-  --bs-btn-border-color: #f8f9fa;
+  --bs-btn-bg: #e0e5ef;
+  --bs-btn-border-color: #e0e5ef;
   --bs-btn-hover-color: #000;
-  --bs-btn-hover-bg: #f9fafb;
-  --bs-btn-hover-border-color: #f9fafb;
-  --bs-btn-focus-shadow-rgb: 211, 212, 213;
+  --bs-btn-hover-bg: #e5e9f1;
+  --bs-btn-hover-border-color: #e3e8f1;
+  --bs-btn-focus-shadow-rgb: 190, 195, 203;
   --bs-btn-active-color: #000;
-  --bs-btn-active-bg: #f9fafb;
-  --bs-btn-active-border-color: #f9fafb;
+  --bs-btn-active-bg: #e6eaf2;
+  --bs-btn-active-border-color: #e3e8f1;
   --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
   --bs-btn-disabled-color: #000;
-  --bs-btn-disabled-bg: #f8f9fa;
-  --bs-btn-disabled-border-color: #f8f9fa;
+  --bs-btn-disabled-bg: #e0e5ef;
+  --bs-btn-disabled-border-color: #e0e5ef;
 }
 
 .btn-dark {
@@ -3222,17 +3440,17 @@ textarea.form-control-lg {
 }
 
 .btn-outline-light {
-  --bs-btn-color: #f8f9fa;
-  --bs-btn-border-color: #f8f9fa;
+  --bs-btn-color: #e0e5ef;
+  --bs-btn-border-color: #e0e5ef;
   --bs-btn-hover-color: #000;
-  --bs-btn-hover-bg: #f8f9fa;
-  --bs-btn-hover-border-color: #f8f9fa;
-  --bs-btn-focus-shadow-rgb: 248, 249, 250;
+  --bs-btn-hover-bg: #e0e5ef;
+  --bs-btn-hover-border-color: #e0e5ef;
+  --bs-btn-focus-shadow-rgb: 224, 229, 239;
   --bs-btn-active-color: #000;
-  --bs-btn-active-bg: #f8f9fa;
-  --bs-btn-active-border-color: #f8f9fa;
+  --bs-btn-active-bg: #e0e5ef;
+  --bs-btn-active-border-color: #e0e5ef;
   --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-  --bs-btn-disabled-color: #f8f9fa;
+  --bs-btn-disabled-color: #e0e5ef;
   --bs-btn-disabled-bg: transparent;
   --bs-gradient: none;
 }
@@ -4837,12 +5055,12 @@ textarea.form-control-lg {
 }
 
 .alert-light {
-  --bs-alert-color: #636464;
-  --bs-alert-bg: #fefefe;
-  --bs-alert-border-color: #fdfdfe;
+  --bs-alert-color: #5a5c60;
+  --bs-alert-bg: #f9fafc;
+  --bs-alert-border-color: #f6f7fa;
 }
 .alert-light .alert-link {
-  color: #4f5050;
+  color: #484a4d;
 }
 
 .alert-dark {
@@ -5239,17 +5457,17 @@ textarea.form-control-lg {
 }
 
 .list-group-item-light {
-  color: #636464;
-  background-color: #fefefe;
+  color: #5a5c60;
+  background-color: #f9fafc;
 }
 .list-group-item-light.list-group-item-action:hover, .list-group-item-light.list-group-item-action:focus {
-  color: #636464;
-  background-color: #e5e5e5;
+  color: #5a5c60;
+  background-color: #e0e1e3;
 }
 .list-group-item-light.list-group-item-action.active {
   color: #FFF;
-  background-color: #636464;
-  border-color: #636464;
+  background-color: #5a5c60;
+  border-color: #5a5c60;
 }
 
 .list-group-item-dark {
@@ -6853,7 +7071,7 @@ textarea.form-control-lg {
 
 .text-bg-light {
   color: #000 !important;
-  background-color: RGBA(248, 249, 250, var(--bs-bg-opacity, 1)) !important;
+  background-color: RGBA(224, 229, 239, var(--bs-bg-opacity, 1)) !important;
 }
 
 .text-bg-dark {
@@ -6904,10 +7122,10 @@ textarea.form-control-lg {
 }
 
 .link-light {
-  color: #f8f9fa !important;
+  color: #e0e5ef !important;
 }
 .link-light:hover, .link-light:focus {
-  color: #f9fafb !important;
+  color: #e6eaf2 !important;
 }
 
 .link-dark {
