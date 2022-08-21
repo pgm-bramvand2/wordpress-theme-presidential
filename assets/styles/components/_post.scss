@@ -1,0 +1,36 @@
+.post-info {
+    display: flex;
+
+    span, 
+    a {
+        font-family: 'Signika';
+        font-size: 1rem;
+        color: $medium;
+        text-decoration: none;
+    }
+    
+    ul {
+        margin: 0;
+        padding: 0;
+        padding-left: 1.5rem;
+
+    }
+}
+
+.post {
+    border-bottom: .1rem solid $light;
+    padding-bottom: 1.5rem;
+    margin-bottom: 2rem;
+
+    h2 {
+        a {
+            font-size: 1.8rem;
+            font-weight: 500;
+            text-decoration: none;
+
+            &:hover {
+                color: $accent;
+            }
+        }
+    }
+}

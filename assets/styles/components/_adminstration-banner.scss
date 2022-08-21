@@ -1,0 +1,25 @@
+.administration-banner {
+    width: 100%;
+    padding: 0 2rem;
+    display: flex;
+
+    figure {
+        width: 50%;
+        height: 50rem;
+        border-radius: 1rem;
+        overflow: hidden;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    .administration-banner-title {
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}

@@ -19,8 +19,7 @@
 
     <div class="posts">
         <?php if($loop -> have_posts()) : ?> 
-            <?php while($loop -> have_posts()) :
-                $loop -> the_post(); ?>
+            <?php while($loop -> have_posts()) : $loop -> the_post(); ?>
 
     <article class="post">
         <h2>
@@ -36,7 +35,7 @@
         </div>
     </article>
 
-    <?php wp_reset_postdata() ?>
+    <?php wp_reset_postdata(); ?>
 
     <?php endwhile ?>
     <?php endif ?>

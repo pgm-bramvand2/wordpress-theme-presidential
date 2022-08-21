@@ -5,20 +5,20 @@
     <div class="feature-container">
         <div class="feature">
             <div class="feature-image-container">
-                <img src="<?php the_sub_field('feature-image') ?>" />
+                <img src="<?php the_sub_field('feature-image'); ?>" />
             </div>
             
             <div class="feature-content-container">
                 <small>
-                    <?php the_sub_field('feature-subtitle') ?>
+                    <?php the_sub_field('feature-subtitle'); ?>
                 </small>
                 
                 <strong>
-                    <?php the_sub_field('feature-title') ?>
+                    <?php the_sub_field('feature-title'); ?>
                 </strong>
 
                 <p>
-                    <?php the_sub_field('feature-text') ?>
+                    <?php the_sub_field('feature-text'); ?>
                 </p>
                 
                 <ul class="line-link-list line-link-list--serif">
@@ -29,13 +29,13 @@
                         
                         <li>
                             <a href="<?php the_permalink() ?>">
-                                <?php the_title() ?>
+                                <?php the_title(); ?>
                             </a>
                         </li>
                         
-                        <?php wp_reset_postdata() ?>
-                    <?php endforeach ?>
-                    <?php endif ?>
+                        <?php wp_reset_postdata(); ?>
+                    <?php endforeach; ?>
+                    <?php endif; ?>
                 </ul>
             </div>
         </div>

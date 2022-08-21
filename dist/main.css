@@ -24,6 +24,7 @@ h5,
 .h5,
 .title {
   font-family: "EB Garamond";
+  font-size: 1.2rem;
   color: #0a2458;
 }
 
@@ -32,6 +33,30 @@ h5,
   font-size: 3rem;
   font-weight: bolder;
   margin-bottom: 3rem;
+}
+
+.administration-banner {
+  width: 100%;
+  padding: 0 2rem;
+  display: flex;
+}
+.administration-banner figure {
+  width: 50%;
+  height: 50rem;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+.administration-banner figure img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.administration-banner .administration-banner-title {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 footer {
@@ -315,6 +340,79 @@ footer .seal-wrapper .wh-seal {
   border-bottom-color: #9c1919;
 }
 
+.post-info {
+  display: flex;
+}
+.post-info span,
+.post-info a {
+  font-family: "Signika";
+  font-size: 1rem;
+  color: #0969be;
+  text-decoration: none;
+}
+.post-info ul {
+  margin: 0;
+  padding: 0;
+  padding-left: 1.5rem;
+}
+
+.post {
+  border-bottom: 0.1rem solid #e0e5ef;
+  padding-bottom: 1.5rem;
+  margin-bottom: 2rem;
+}
+.post h2 a, .post .h2 a {
+  font-size: 1.8rem;
+  font-weight: 500;
+  text-decoration: none;
+}
+.post h2 a:hover, .post .h2 a:hover {
+  color: #9c1919;
+}
+
+.centered-content {
+  margin: 5rem auto;
+  width: 82.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.administration .administration-intro {
+  max-width: 40%;
+}
+.administration .admin-cards {
+  margin-top: 5rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.administration .admin-cards .admin-card {
+  width: 22.5%;
+  transition: all 0.3s ease-in-out;
+}
+.administration .admin-cards .admin-card:hover {
+  transform: translateY(-1rem);
+}
+.administration .admin-cards .admin-card a {
+  text-decoration: none;
+}
+.administration .admin-cards .admin-card a .admin-card-title P {
+  font-family: "Signika";
+}
+.administration .admin-cards .admin-card a figure {
+  width: 100%;
+  height: 18rem;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+.administration .admin-cards .admin-card a figure img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
 .briefing-room {
   margin: 5rem auto;
   width: 82.5rem;
@@ -325,33 +423,140 @@ footer .seal-wrapper .wh-seal {
   max-width: 40rem;
   padding: 0 2rem;
 }
-.briefing-room .briefing-room-inner .posts .post {
-  border-bottom: 0.1rem solid #e0e5ef;
-  padding-bottom: 1.5rem;
-  margin-bottom: 2rem;
+
+.covid-plan-banner {
+  width: 100%;
+  padding: 0 2rem;
 }
-.briefing-room .briefing-room-inner .posts .post h2 a, .briefing-room .briefing-room-inner .posts .post .h2 a {
+.covid-plan-banner .covid-plan-banner-inner {
+  width: 100%;
+  height: 24rem;
+  background-color: #0a2458;
+  border-radius: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.covid-plan-banner h1, .covid-plan-banner .h1 {
+  text-align: center;
+  width: 20%;
+  color: #FFF;
+}
+
+.covid-plan p {
+  width: 40%;
+}
+.covid-plan .covid-plan-nav {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.covid-plan .covid-plan-nav .covid-plan-nav-link {
+  width: 16rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.covid-plan .covid-plan-nav .covid-plan-nav-link figure {
+  width: 6rem;
+  height: 6rem;
+}
+.covid-plan .covid-plan-nav .covid-plan-nav-link figure img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.covid-plan-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 2.5rem;
+  color: #0a2458;
+}
+.covid-plan-step h2, .covid-plan-step .h2 {
+  margin-bottom: 1.5rem;
+}
+.covid-plan-step h3, .covid-plan-step .h3 {
+  font-size: 1.5rem !important;
+}
+.covid-plan-step figure {
+  width: 6rem;
+  height: 6rem;
+}
+.covid-plan-step figure img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.post-detail .post-detail-header {
+  max-width: 51.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.post-detail .post-detail-header .post-detail-link {
+  font-family: "Signika";
+  text-decoration: none;
+  color: #0969be;
+}
+.post-detail .post-detail-header .title {
+  margin-bottom: 0;
+}
+.post-detail .post-detail-content {
+  margin: 5rem auto;
+  max-width: 50%;
+}
+.post-detail .post-detail-content strong {
+  text-transform: uppercase;
+}
+.post-detail .post-detail-content p strong {
+  text-transform: none;
+}
+
+.page .page-header {
+  max-width: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.page .page-header .page-link {
+  font-family: "Signika";
+  text-decoration: none;
+  color: #0969be;
+}
+.page .page-header .title {
+  margin-bottom: 0;
+}
+.page .page-content {
+  margin: 5rem auto;
+  max-width: 40%;
+}
+.page .page-content .page-intro {
   font-size: 1.8rem;
   font-weight: 500;
-  text-decoration: none;
+  line-height: 1.2;
+  text-align: center;
 }
-.briefing-room .briefing-room-inner .posts .post h2 a:hover, .briefing-room .briefing-room-inner .posts .post .h2 a:hover {
-  color: #9c1919;
+.page .page-content h2, .page .page-content .h2 {
+  color: #0a2458;
+  font-weight: 800;
+  margin-bottom: 1.5rem;
 }
-.briefing-room .briefing-room-inner .posts .post .post-info {
-  display: flex;
+.page .page-content strong {
+  text-transform: uppercase;
 }
-.briefing-room .briefing-room-inner .posts .post .post-info span,
-.briefing-room .briefing-room-inner .posts .post .post-info a {
-  font-family: "Signika";
-  font-size: 1rem;
-  color: #0969be;
-  text-decoration: none;
+.page .page-content p strong {
+  text-transform: none;
 }
-.briefing-room .briefing-room-inner .posts .post .post-info ul {
-  margin: 0;
-  padding: 0;
-  padding-left: 1.5rem;
+.page .page-content .wp-block-separator {
+  margin: 2.5rem auto;
+  width: 10rem;
+  text-align: center;
 }
 
 /*!

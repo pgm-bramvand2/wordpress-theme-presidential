@@ -6,15 +6,24 @@
 @import './base/typography';
 
 // Components
+@import './components/adminstration-banner';
 @import './components/footer';
 @import './components/header';
 @import './components/hero';
 @import './components/feature';
 @import './components/list';
 @import './components/pagination';
+@import './components/post';
+
+// Layout
+@import './layout/centered-content';
 
 // Pages
+@import './pages/administration';
 @import './pages/briefing-room';
+@import './pages/covid-plan';
+@import './pages/post-detail';
+@import './pages/page';
 
 // Vendors
 @import './vendors/bootstrap';

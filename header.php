@@ -9,12 +9,12 @@
 
     
 
-    <?php wp_head() ?>
+    <?php wp_head(); ?>
 </head>
 
 <body>
 
-<nav class="navbar navbar-expand-xl sticky">
+<nav class="navbar navbar-expand-xl fixed-top">
   <div class="container-fluid px-5">
     <a class="navbar-brand" href="#">
         <span class="title text-uppercase h5 primary">

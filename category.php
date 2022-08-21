@@ -1,6 +1,6 @@
-<?php get_header() ?>
+<?php get_header(); ?>
 
-<h1><?php the_category() ?></h1>
+<h1><?php the_category(); ?></h1>
 
 
 <?php
@@ -22,4 +22,4 @@ if(have_posts()) {
 ?>
 
 
-<?php get_footer() ?>
+<?php get_footer(); ?>
