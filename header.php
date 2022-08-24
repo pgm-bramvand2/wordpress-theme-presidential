@@ -16,7 +16,7 @@
 
 <nav class="navbar navbar-expand-xl fixed-top">
   <div class="container-fluid px-5">
-    <a class="navbar-brand" href="#">
+    <a class="navbar-brand" href="/">
         <span class="title text-uppercase h5 primary">
             the white house
         </span>
@@ -42,7 +42,7 @@
         ?>
         <?php if(is_user_logged_in()) : ?>
         <li class="nav-item">
-          <a href="/area51" class="nav-link">
+          <a href="/area-51" class="nav-link">
             Area 51
           </a>
         </li>
@@ -53,10 +53,14 @@
           <a class="d-block ms-2 btn btn-danger" href="<?php echo wp_logout_url(home_url()); ?>">
               <?php _e('Sign out', 'whitehouse'); ?>
           </a>
-      <?php else : ?>
-          <a href="<?php echo wp_registration_url(); ?>" class="d-block ms-2 btn btn-primary">
-            <?php _e('Register', 'whitehouse'); ?>
-          </a>
+          <?php else : ?>
+            <a href="<?php echo wp_login_url(); ?>" class="d-block ms-2 btn btn-primary">
+              <?php _e('Login', 'whitehouse'); ?>
+            </a>
+            
+            <a href="<?php echo wp_registration_url(); ?>" class="d-block ms-2 btn btn-outline-primary">
+              <?php _e('Register', 'whitehouse'); ?>
+            </a>
       <?php endif ?>
     </div>
   </div>

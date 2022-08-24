@@ -99,6 +99,7 @@ h5,
 
 .searchbar {
   position: absolute;
+  z-index: 10;
   right: 3rem;
 }
 
@@ -466,7 +467,7 @@ footer .seal-wrapper .wh-seal {
 
 .about-page-header {
   width: 100%;
-  padding: 2rem;
+  padding: 0 2rem;
   position: relative;
 }
 .about-page-header figure {
