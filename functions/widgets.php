@@ -24,6 +24,14 @@ function add_widgets() {
         'before_widget' => '<div class="widget">',
         'after_widget' => '</div>'
     ) );
+
+    register_sidebar( array(
+        'name' => 'Categories Menu Widget',
+        'id' => 'categories_menu_widget',
+        'description' => 'Widget containing the menu for all categories',
+        'before_widget' => '<aside class="categories-menu">',
+        'after_widget' => '</aside>'
+    ) );
 }
 
 add_action( 'widgets_init', 'add_widgets' );

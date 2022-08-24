@@ -1,35 +1,38 @@
 .post-detail {
-    
     .post-detail-header {
         max-width: 51.5rem;
         display: flex;
         flex-direction: column;
         align-items: center;
 
-        .post-detail-link {
-            font-family: 'Signika';
-            text-decoration: none;
-            color: $medium;
-        }
-
+        
         .title {
             margin-bottom: 0;
         }
     }
-
+    
     .post-detail-content {
         margin: 5rem auto;
         max-width: 50%;
-
+        
         strong {
             text-transform: uppercase;
         }
-
+        
         p {
             strong {
                 text-transform: none;
             }
         }
-
+        
     }
+}
+
+.post-detail-link {
+    font-family: $fontSansSerif;
+    text-decoration: none;
+    color: $medium;
+    width: 100%;
+    display: block;
+    text-align: center;
 }

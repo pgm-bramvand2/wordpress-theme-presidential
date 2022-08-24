@@ -1,13 +1,94 @@
 /******/ (() => { // webpackBootstrap
+/******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
+
+/***/ "./assets/scripts/autocomplete.js":
+/*!****************************************!*\
+  !*** ./assets/scripts/autocomplete.js ***!
+  \****************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _utils__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./utils */ "./assets/scripts/utils.js");
+
+document.addEventListener('DOMContentLoaded', function () {
+  var inputEl = document.getElementById('autocomplete-search');
+  var resultsEl = document.getElementById('autocomplete-results');
+  var auth = {
+    method: 'GET',
+    headers: {
+      'Content-Type': 'application/json',
+      'X-WP-Nonce': data.nonce
+    }
+  };
+
+  if (inputEl) {
+    var transformJson = function transformJson(json) {
+      return json.map(function (el) {
+        return "<li class=\"w-100\"><a class='d-block text-decoration-none py-3 px-3 text-dark' href='".concat(el.permalink, "'>").concat(el.label, "</a></li>");
+      }).join('');
+    };
+
+    var setAutocomplete = function setAutocomplete(json) {
+      resultsEl.innerHTML = transformJson(json);
+    };
+
+    inputEl.addEventListener('input', (0,_utils__WEBPACK_IMPORTED_MODULE_0__.debounce)(function (e) {
+      var input = e.target.value;
+
+      if (input.length > 2) {
+        fetch("".concat(data.search_url).concat(input), auth).then(function (d) {
+          return d.json();
+        }).then(function (json) {
+          return setAutocomplete(json);
+        })["catch"](function (e) {
+          return console.error(e.message);
+        });
+      }
+    }, 1000));
+  }
+});
+
+/***/ }),
 
 /***/ "./assets/scripts/main.js":
 /*!********************************!*\
   !*** ./assets/scripts/main.js ***!
   \********************************/
-/***/ (() => {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _autocomplete__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./autocomplete */ "./assets/scripts/autocomplete.js");
 
 
+/***/ }),
+
+/***/ "./assets/scripts/utils.js":
+/*!*********************************!*\
+  !*** ./assets/scripts/utils.js ***!
+  \*********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "debounce": () => (/* binding */ debounce)
+/* harmony export */ });
+var _this = undefined;
+
+var debounce = function debounce(func) {
+  var timeout = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 300;
+  var timer;
+  return function () {
+    for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
+    }
+
+    clearTimeout(timer);
+    timer = setTimeout(function () {
+      func.apply(_this, args);
+    }, timeout);
+  };
+};
 
 /***/ }),
 
@@ -17,7 +98,6 @@
   \*********************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 __webpack_require__.r(__webpack_exports__);
 // extracted by mini-css-extract-plugin
 
@@ -83,6 +163,18 @@ __webpack_require__.r(__webpack_exports__);
 /******/ 				}
 /******/ 			}
 /******/ 			return result;
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/define property getters */
+/******/ 	(() => {
+/******/ 		// define getter functions for harmony exports
+/******/ 		__webpack_require__.d = (exports, definition) => {
+/******/ 			for(var key in definition) {
+/******/ 				if(__webpack_require__.o(definition, key) && !__webpack_require__.o(exports, key)) {
+/******/ 					Object.defineProperty(exports, key, { enumerable: true, get: definition[key] });
+/******/ 				}
+/******/ 			}
 /******/ 		};
 /******/ 	})();
 /******/ 	

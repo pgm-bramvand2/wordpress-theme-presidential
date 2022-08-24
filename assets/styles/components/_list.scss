@@ -10,7 +10,7 @@
             display: block;
             padding: .25rem 0 .25rem 1rem ;
             border-left: .2rem solid $accent;
-            font-family: 'Signika', sans-serif;
+            font-family: $fontSansSerif, sans-serif;
             text-decoration: none;
 
             &:hover {
@@ -22,7 +22,7 @@
     &.line-link-list--serif {
         li {
             a {
-                font-family: 'EB Garamond';
+                font-family: $fontSerif;
                 font-size: 1.5rem;
             }
         }

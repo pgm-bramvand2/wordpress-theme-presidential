@@ -1,0 +1,23 @@
+.recent-posts {
+    width: 100%;
+    
+    ul {
+        column-count: 2;
+        border-left: solid .1rem $light;
+        list-style: none;
+
+        .post {
+
+            display: flex;
+            flex-direction: column;
+            ul{
+                list-style-type: disc;
+                border: none;
+            }
+
+            a {
+                text-decoration: none    ;
+            }
+        }
+    }
+}

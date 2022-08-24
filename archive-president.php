@@ -3,11 +3,11 @@
 <section class="administration centered-content">
     <div class="administration-intro">
         <h1 class="title"><?php get_header(); ?>
-            <?php the_field('page-title', 11) ?> 
+            <?php the_field('page-title', 302) ?> 
         </h1>
         
         <p>
-            <?php the_field('page-intro', 11) ?> 
+            <?php the_field('page-intro', 302) ?> 
         </p>
     </div>
     
@@ -22,6 +22,7 @@
                         </figure>
                         
                         <h2 class="post-card-title">
+                            <?php the_title(); ?>
                             <?php the_excerpt(); ?>
                         </h2>
                     </a>

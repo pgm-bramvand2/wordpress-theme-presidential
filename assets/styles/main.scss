@@ -7,6 +7,8 @@
 
 // Components
 @import './components/adminstration-banner';
+@import './components/cards';
+@import './components/searchbar';
 @import './components/footer';
 @import './components/header';
 @import './components/hero';
@@ -14,13 +16,17 @@
 @import './components/list';
 @import './components/pagination';
 @import './components/post';
+@import './components/recent-posts';
 
 // Layout
 @import './layout/centered-content';
+@import './layout/content-with-aside';
 
 // Pages
+@import './pages/about-the-white-house';
 @import './pages/administration';
 @import './pages/briefing-room';
+@import './pages/contact-us';
 @import './pages/covid-plan';
 @import './pages/post-detail';
 @import './pages/page';

@@ -1,25 +1,47 @@
 <?php get_header(); ?>
 
-<h1><?php the_category(); ?></h1>
+<section class="briefing-room content-with-aside">
+    <div class="briefing-room-inner">
+        <a    
+            class="post-detail-link" 
+            href="<?php echo apply_filters( 'the_permalink', get_the_permalink( get_option( 'page_for_posts' ) ) ); ?>"
+        >
+            <?php echo apply_filters( 'the_title', get_the_title( get_option( 'page_for_posts' ) ) );?>
+        </a>
 
+        <h1 class="title">
+            <?php echo single_cat_title(); ?>
+        </h1>
 
-<?php
+        <div class="posts">
+            <?php if(have_posts()) : ?> 
+                <?php while(have_posts()) : the_post(); ?>
 
-if(have_posts()) {
-    while(have_posts()) {
-        the_post(); ?>
+        <article class="post">
+            <h2>
+                <a href="<?php the_permalink(); ?>">
+                    <?php the_title(); ?>
+                </a>
+            </h2>
 
-        <article>
-            <a href="<?php the_permalink(); ?>">
-                <strong><?php the_title(); ?></strong>
-            </a>
+            <div class="post-info">
+                <span><?php the_time( 'F d, Y' ); ?></span>
 
-            <a href="<?php the_permalink(); ?>"><?php the_category(); ?></a>
+                <span><?php the_category(); ?></span>
+            </div>
         </article>
-        <?php
-    }
-} 
-?>
+
+        <?php wp_reset_postdata(); ?>
+
+        <?php endwhile ?>
+        <?php endif ?>
+        </div>
+    </div>
+
+    <?php if (is_active_sidebar( 'categories_menu_widget' )) : ?>
+        <?php dynamic_sidebar( 'categories_menu_widget' ); ?>
+    <?php endif ?>
+</section>
 
 
 <?php get_footer(); ?>

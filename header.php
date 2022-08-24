@@ -26,7 +26,7 @@
         <?php the_custom_logo(); ?>
     </div>
     
-    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">      
       <ul class="navbar-nav">
       <?php
             if (has_nav_menu('primary_menu')) {
@@ -40,8 +40,29 @@
                 ]);
             }
         ?>
+        <?php if(is_user_logged_in()) : ?>
+        <li class="nav-item">
+          <a href="/area51" class="nav-link">
+            Area 51
+          </a>
+        </li>
+        <?php endif; ?>
       </ul>
+      
+      <?php if (is_user_logged_in()) : ?>                   
+          <a class="d-block ms-2 btn btn-danger" href="<?php echo wp_logout_url(home_url()); ?>">
+              <?php _e('Sign out', 'whitehouse'); ?>
+          </a>
+      <?php else : ?>
+          <a href="<?php echo wp_registration_url(); ?>" class="d-block ms-2 btn btn-primary">
+            <?php _e('Register', 'whitehouse'); ?>
+          </a>
+      <?php endif ?>
     </div>
   </div>
 </nav>
+
+<div class="searchbar">
+  <?php get_template_part( 'components/autocomplete', 'autocomplete'); ?>
+</div>
 

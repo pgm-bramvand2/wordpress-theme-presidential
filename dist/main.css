@@ -59,6 +59,49 @@ h5,
   align-items: center;
 }
 
+.post-cards {
+  margin-top: 5rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.post-cards .post-card {
+  width: 22.5%;
+  transition: all 0.3s ease-in-out;
+}
+.post-cards .post-card:hover {
+  transform: translateY(-1rem);
+}
+.post-cards .post-card a {
+  text-decoration: none;
+}
+.post-cards .post-card a .post-card-title {
+  font-family: "Signika";
+  font-size: 1.25rem;
+}
+.post-cards .post-card a .post-card-title P {
+  font-family: "Signika";
+  font-size: 1rem;
+}
+.post-cards .post-card a figure {
+  width: 100%;
+  height: 18rem;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+.post-cards .post-card a figure img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.searchbar {
+  position: absolute;
+  right: 3rem;
+}
+
 footer {
   width: 100%;
   margin-top: 5rem;
@@ -370,6 +413,27 @@ footer .seal-wrapper .wh-seal {
   color: #9c1919;
 }
 
+.recent-posts {
+  width: 100%;
+}
+.recent-posts ul {
+  -moz-column-count: 2;
+       column-count: 2;
+  border-left: solid 0.1rem #e0e5ef;
+  list-style: none;
+}
+.recent-posts ul .post {
+  display: flex;
+  flex-direction: column;
+}
+.recent-posts ul .post ul {
+  list-style-type: disc;
+  border: none;
+}
+.recent-posts ul .post a {
+  text-decoration: none;
+}
+
 .centered-content {
   margin: 5rem auto;
   width: 82.5rem;
@@ -378,50 +442,73 @@ footer .seal-wrapper .wh-seal {
   align-items: center;
 }
 
-.administration .administration-intro {
-  max-width: 40%;
+.content-with-aside {
+  position: relative;
 }
-.administration .admin-cards {
-  margin-top: 5rem;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
+.content-with-aside .categories-menu {
+  position: absolute;
+  right: 0;
+  margin-top: 7rem;
 }
-.administration .admin-cards .admin-card {
-  width: 22.5%;
-  transition: all 0.3s ease-in-out;
+.content-with-aside .categories-menu h2, .content-with-aside .categories-menu .h2 {
+  display: none;
 }
-.administration .admin-cards .admin-card:hover {
-  transform: translateY(-1rem);
+.content-with-aside .categories-menu ul {
+  margin-left: 2rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  list-style: none;
+  border-left: solid 0.1rem #e0e5ef;
 }
-.administration .admin-cards .admin-card a {
-  text-decoration: none;
-}
-.administration .admin-cards .admin-card a .admin-card-title P {
+.content-with-aside .categories-menu ul a {
   font-family: "Signika";
 }
-.administration .admin-cards .admin-card a figure {
+
+.about-page-header {
   width: 100%;
-  height: 18rem;
+  padding: 2rem;
+  position: relative;
+}
+.about-page-header figure {
+  width: 100%;
+  max-height: 58rem;
   border-radius: 1rem;
   overflow: hidden;
 }
-.administration .admin-cards .admin-card a figure img {
-  -o-object-fit: cover;
-     object-fit: cover;
+.about-page-header figure img {
   width: 100%;
   height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.about-page-header .about-page-header-title {
+  width: 20rem;
+  font-size: 3.5rem;
+  color: #FFF;
+  position: absolute;
+  bottom: 3rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.administration .administration-intro {
+  max-width: 40%;
 }
 
 .briefing-room {
   margin: 5rem auto;
   width: 82.5rem;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
 }
 .briefing-room .briefing-room-inner {
   max-width: 40rem;
   padding: 0 2rem;
+}
+
+.contact-form-container {
+  width: 60%;
 }
 
 .covid-plan-banner {
@@ -499,11 +586,6 @@ footer .seal-wrapper .wh-seal {
   flex-direction: column;
   align-items: center;
 }
-.post-detail .post-detail-header .post-detail-link {
-  font-family: "Signika";
-  text-decoration: none;
-  color: #0969be;
-}
 .post-detail .post-detail-header .title {
   margin-bottom: 0;
 }
@@ -516,6 +598,15 @@ footer .seal-wrapper .wh-seal {
 }
 .post-detail .post-detail-content p strong {
   text-transform: none;
+}
+
+.post-detail-link {
+  font-family: "Signika";
+  text-decoration: none;
+  color: #0969be;
+  width: 100%;
+  display: block;
+  text-align: center;
 }
 
 .page .page-header {
@@ -553,7 +644,8 @@ footer .seal-wrapper .wh-seal {
 .page .page-content p strong {
   text-transform: none;
 }
-.page .page-content .wp-block-separator {
+
+.wp-block-separator {
   margin: 2.5rem auto;
   width: 10rem;
   text-align: center;
