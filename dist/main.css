@@ -105,7 +105,7 @@ h5,
 
 footer {
   width: 100%;
-  margin-top: 5rem;
+  margin-top: 2rem;
   padding: 5rem;
   position: relative;
 }
@@ -416,23 +416,104 @@ footer .seal-wrapper .wh-seal {
 
 .recent-posts {
   width: 100%;
-}
-.recent-posts ul {
-  -moz-column-count: 2;
-       column-count: 2;
-  border-left: solid 0.1rem #e0e5ef;
-  list-style: none;
-}
-.recent-posts ul .post {
   display: flex;
-  flex-direction: column;
 }
-.recent-posts ul .post ul {
+.recent-posts .post-spotlight {
+  width: 30%;
+}
+.recent-posts .post-spotlight .post strong a {
+  font-size: 2rem;
+}
+.recent-posts .post-spotlight .post .post-info {
+  width: 100%;
+  display: flex;
+}
+.recent-posts .post-spotlight .post span ul {
+  width: 100%;
   list-style-type: disc;
   border: none;
 }
-.recent-posts ul .post a {
+.recent-posts ul {
+  width: 30%;
+  border-left: solid 0.1rem #e0e5ef;
+  list-style: none;
+}
+.recent-posts ul li.post {
+  display: flex;
+  flex-direction: column;
+}
+.recent-posts ul li.post .post-info {
+  width: 100%;
+  display: flex;
+}
+.recent-posts ul li.post span ul {
+  width: 100%;
+  list-style-type: disc;
+  border: none;
+}
+.recent-posts a {
   text-decoration: none;
+}
+
+.stay-connected-widget-container {
+  max-width: 82.5rem;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2.5rem 3rem;
+  border: solid 0.2rem #0a2458;
+  border-radius: 1rem;
+}
+.stay-connected-widget-container .stay-connected-widget {
+  height: 10rem;
+}
+.stay-connected-widget-container .stay-connected-widget .image {
+  height: 100% !important;
+}
+.stay-connected-widget-container .stay-connected-widget .stay-connected-form {
+  display: flex;
+  flex-wrap: wrap;
+}
+.stay-connected-widget-container .stay-connected-widget .stay-connected-form form {
+  width: 44.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+}
+.stay-connected-widget-container .stay-connected-widget .stay-connected-form form .wpforms-head-container {
+  width: 100%;
+  font-family: "EB Garamond";
+}
+.stay-connected-widget-container .stay-connected-widget .stay-connected-form form .wpforms-field-container {
+  width: 75%;
+  display: flex;
+}
+.stay-connected-widget-container .stay-connected-widget .stay-connected-form form .wpforms-field-container .wpforms-field .wpforms-field-medium {
+  max-width: 100% !important;
+}
+.stay-connected-widget-container .stay-connected-widget .stay-connected-form form .wpforms-field-container .stay-connected-form-email {
+  width: 20rem;
+  margin-right: 2rem;
+}
+.stay-connected-widget-container .stay-connected-widget .stay-connected-form form .wpforms-field-container .stay-connected-form-zip {
+  width: 10rem;
+}
+.stay-connected-widget-container .stay-connected-widget .stay-connected-form form .wpforms-field-container .stay-connected-form-zip .wpforms-field-medium {
+  max-width: 100% !important;
+}
+.stay-connected-widget-container .stay-connected-widget .stay-connected-form form .wpforms-field-container .wpforms-field {
+  padding: 0;
+}
+.stay-connected-widget-container .stay-connected-widget .stay-connected-form form .wpforms-submit-container {
+  width: 20%;
+}
+.stay-connected-widget-container .stay-connected-widget .stay-connected-form form .wpforms-submit-container .stay-connected-form-button {
+  width: 100%;
+  background-color: #0a2458;
+  color: #FFF;
+  border-radius: 1rem;
 }
 
 .centered-content {

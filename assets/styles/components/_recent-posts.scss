@@ -1,23 +1,62 @@
 .recent-posts {
     width: 100%;
+    display: flex;
+
+    .post-spotlight {
+        width: 30%;
+
+        .post {
+            strong {
+                
+                a {
+                    font-size: 2rem;
+                }
+            }
+
+            .post-info {
+                width: 100%;
+                display: flex;
+            }
+            span {
+            
+              ul{
+                    width: 100%;
+                    list-style-type: disc;
+                    border: none;
+                }
+    
+                
+            }
+        }
+    }
     
     ul {
-        column-count: 2;
+        width: 30%;
         border-left: solid .1rem $light;
         list-style: none;
 
-        .post {
-
+        li.post {
             display: flex;
             flex-direction: column;
-            ul{
-                list-style-type: disc;
-                border: none;
-            }
 
-            a {
-                text-decoration: none    ;
+            .post-info {
+                width: 100%;
+                display: flex;
+            }
+            span {
+            
+              ul{
+                    width: 100%;
+                    list-style-type: disc;
+                    border: none;
+                }
+    
+                
             }
         }
+    }
+
+    a {
+        text-decoration: none    ;
     }
 }

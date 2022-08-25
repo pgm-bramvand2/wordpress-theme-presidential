@@ -1,0 +1,75 @@
+.stay-connected-widget-container {
+    max-width: $maxWidth;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2.5rem 3rem;
+    border: solid .2rem $primary;
+    border-radius: 1rem;
+    .stay-connected-widget {
+        height: 10rem;
+
+        .image {
+            height: 100%!important;
+        }
+
+     .stay-connected-form {
+         display: flex;
+         flex-wrap: wrap;
+         form {
+            width: 44.5rem;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: flex-end;
+            
+            .wpforms-head-container {
+                width: 100%;
+                font-family: $fontSerif;
+            }
+
+            .wpforms-field-container {
+                width: 75%;
+                display: flex;
+
+                .wpforms-field {
+
+                    .wpforms-field-medium {
+                       max-width: 100%!important;
+                    }
+                }
+
+                .stay-connected-form-email {
+                    width: 20rem;
+                    margin-right: 2rem;    
+                }
+                
+                .stay-connected-form-zip {
+                    width: 10rem;
+                    
+                    .wpforms-field-medium {
+                        max-width: 100%!important;
+                    }
+                }
+                .wpforms-field {
+                    padding: 0;
+
+                }
+            }
+
+            .wpforms-submit-container {
+                width: 20%;
+
+                .stay-connected-form-button {
+                    width: 100%;
+                    background-color: $primary;
+                    color: $white;
+                    border-radius: 1rem;
+                }
+            }
+        }
+
+     }   
+    }
+}

@@ -18,6 +18,13 @@ function add_widgets() {
     ) );
 
     register_sidebar( array(
+        'name' => 'Stay Connect Widget',
+        'id' => 'stay_connected_widget',
+        'before_widget' => '<div class="stay-connected-widget">',
+        'after_widget' => '</div>',
+    ) );
+
+    register_sidebar( array(
         'name' => 'Footer Widget Area',
         'id' => 'footer_widgets',
         'description' => 'Footer area containing links and general info',
